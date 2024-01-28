@@ -14,6 +14,7 @@ public class HelloApplication {
 	@PostConstruct
 	public static void init(){
 		logger.info("💜 Application loading...");
+		logger.info("😀");
 	}
 
 	public static void main(String[] args) {
