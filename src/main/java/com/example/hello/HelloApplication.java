@@ -15,6 +15,7 @@ public class HelloApplication {
 	public static void init(){
 		logger.info("💜 Application loading...");
 		logger.info("😀");
+		logger.info("🎈");
 	}
 
 	public static void main(String[] args) {
