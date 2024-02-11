@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: hello-docker
+spec:
+  selector:
+    matchLabels:
+      app: hello-docker
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: hello-docker
+    spec:
+      containers:
+        - name: hello-docker
+          image: geraldine999/hello-docker.jar:latest # Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7777 # The port that the container is running on in the cluster
